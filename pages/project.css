@@ -1,0 +1,361 @@
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#021b34;
+  color:white;
+}
+
+/* ===== HEADER ===== */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  position:fixed;
+  width:100%;
+  top:0;
+  background:#0a2a4f;
+  border-bottom:1px solid rgba(47,140,255,0.2);
+  z-index:1000;
+}
+
+/* LOGO */
+.logo img{
+  height:42px;
+  mix-blend-mode:lighten;
+}
+
+/* NAV DESKTOP */
+.nav{
+  display:flex;
+  gap:25px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#cfe6ff;
+  transition:0.3s;
+}
+
+.nav a:hover{
+  color:#2f8cff;
+}
+
+/* HAMBURGER (HIDDEN DESKTOP) */
+.hamburger{
+  display:none;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* CLOSE BTN */
+.close-btn{
+  display:none;
+}
+
+/* ===== OVERLAY ===== */
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s;
+  z-index:999;
+}
+
+.overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+/* ===== SEARCH BAR ===== */
+.search-box{
+  margin-top:110px; /* header spacing */
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.search-box input{
+  width:90%;
+  max-width:420px;
+  padding:12px 18px;
+  border-radius:25px;
+  border:none;
+  outline:none;
+  background:rgba(255,255,255,0.08);
+  color:white;
+  font-size:14px;
+}
+
+/* ===== PROJECT GRID ===== */
+.projects-container{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:30px;
+  padding:20px 40px 60px;
+}
+
+/* ===== CARD ===== */
+.project-card{
+  background:rgba(255,255,255,0.05);
+  border-radius:15px;
+  overflow:hidden;
+  text-align:center;
+  transition:0.3s;
+  border:1px solid rgba(77,166,255,0.2);
+}
+
+.project-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(77,166,255,0.15);
+}
+
+/* IMAGE */
+.project-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  background:#021b34;
+}
+
+/* TEXT */
+.project-card h3{
+  margin-top:12px;
+  font-size:18px;
+}
+
+.project-card p{
+  font-size:14px;
+  color:#ccc;
+}
+
+.project-card span{
+  display:block;
+  margin:8px 0;
+  color:#4da6ff;
+  font-weight:bold;
+}
+
+/* BUTTON */
+.project-card button{
+  margin-top:8px;
+  padding:10px 18px;
+  border-radius:20px;
+  border:none;
+  background:#4da6ff;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.project-card button:hover{
+  background:#2f8cff;
+}
+
+/* ===== TABLET ===== */
+@media(max-width:1024px){
+  .projects-container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* === MOBILE ===== */ 
+@media(max-width:768px){
+
+  .hamburger{
+    display:block;
+  }
+
+  .nav{
+    position:fixed;
+    top:0;
+    left:-100%;
+    width:75%;
+    height:100vh;
+
+    background:linear-gradient(180deg,#021b34,#0a2a4f);
+
+    flex-direction:column;
+    padding-top:80px;
+    gap:10px;
+
+    transition:0.4s;
+    z-index:1001;
+  }
+
+  .nav a{
+    padding:15px 30px;
+    font-size:18px;
+  }
+
+  .nav.active{
+    left:0;
+  }
+
+  .close-btn{
+    display:block;
+    position:absolute;
+    top:20px;
+    right:20px;
+    font-size:22px;
+    cursor:pointer;
+  }
+
+  .overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    opacity:0;
+    visibility:hidden;
+    transition:0.3s;
+    z-index:1000;
+  }
+
+  .overlay.active{
+    opacity:1;
+    visibility:visible;
+  }
+
+
+  /* GRID FIX */
+  .projects-container{
+    grid-template-columns: repeat(2, 1fr);
+    padding:20px;
+    gap:15px;
+  }
+
+  .project-card img{
+    height:120px;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media(max-width:480px){
+  .projects-container{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ===== DESKTOP RESET (IMPORTANT) ===== */
+@media(min-width:769px){
+  .nav{
+    position:static !important;
+    height:auto !important;
+    flex-direction:row !important;
+  }
+
+  .overlay{
+    display:none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== FOOTER ===== */
+.footer{
+  background:#021b34;
+  padding:60px 20px 20px;
+  border-top:1px solid rgba(77,166,255,0.2);
+}
+
+/* GRID */
+.footer-container{
+  max-width:1100px;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+
+/* HEADINGS */
+.footer h2,
+.footer h3{
+  color:#4da6ff;
+  margin-bottom:15px;
+}
+
+/* TEXT */
+.footer p{
+  color:#cfe6ff;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* LINKS */
+.footer-links a{
+  display:block;
+  color:#cfe6ff;
+  text-decoration:none;
+  margin:6px 0;
+  transition:0.3s;
+}
+
+.footer-links a:hover{
+  color:#2f8cff;
+  transform:translateX(5px);
+}
+
+/* CONTACT ICONS */
+.footer-contact i{
+  margin-right:8px;
+  color:#4da6ff;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 16px;
+  border-radius:25px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+  background:#1ebe5d;
+  transform:scale(1.05);
+}
+
+/* BOTTOM */
+.footer-bottom{
+  text-align:center;
+  margin-top:30px;
+  border-top:1px solid rgba(77,166,255,0.1);
+  padding-top:15px;
+  font-size:13px;
+  color:#aaa;
+}

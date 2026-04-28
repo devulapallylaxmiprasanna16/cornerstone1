@@ -1,0 +1,268 @@
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#021b34;
+  color:white;
+}
+
+
+/* ===== HEADER ===== */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  position:fixed;
+  width:100%;
+  top:0;
+  background:#0a2a4f;
+  border-bottom:1px solid rgba(47,140,255,0.2);
+  z-index:1000;
+}
+
+.logo img{
+  height:42px;
+  mix-blend-mode:lighten;
+}
+
+.nav{
+  display:flex;
+  gap:25px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#cfe6ff;
+}
+
+.nav a:hover{
+  color:#2f8cff;
+}
+
+.hamburger{
+  display:none;
+}
+
+.close-btn{
+  display:none;
+}
+
+/* ===== OVERLAY ===== */
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s;
+  z-index:999;
+}
+
+.overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+
+
+
+/* ===== CONTACT (COMPACT LAPTOP VERSION) ===== */
+.contact{
+  padding:120px 40px 120px;   /* reduced top + bottom space */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background: linear-gradient(135deg, #021b34, #0a2a4f);
+}
+
+.contact h2{
+  color:#4da6ff;
+  margin-bottom:20px;   /* reduced */
+  font-size:26px;       /* smaller heading */
+}
+
+/* MAIN BOX */
+.contact-container{
+  width:100%;
+  max-width:850px;   /* 🔥 reduced from 1000px */
+  
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;          /* reduced gap */
+
+  background:rgba(255,255,255,0.04);
+  padding:25px;      /* 🔥 reduced padding */
+  border-radius:16px;
+  backdrop-filter:blur(10px);
+}
+
+/* LEFT SIDE */
+.contact-info h3{
+  margin-bottom:15px;
+  font-size:18px;
+}
+
+.contact-info p{
+  margin:8px 0;      /* reduced spacing */
+  font-size:14px;
+}
+
+.contact-info i{
+  margin-right:8px;
+  color:#4da6ff;
+}
+
+.contact-info a{
+  color:#4da6ff;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* FORM */
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:10px;     /* 🔥 smaller fields */
+  margin-bottom:10px;
+
+  border:none;
+  border-radius:8px;
+
+  background:rgba(255,255,255,0.08);
+  color:white;
+  outline:none;
+  font-size:14px;
+}
+
+/* BUTTON */
+.contact-form button{
+  width:100%;
+  padding:12px;     /* reduced */
+  border:none;
+  border-radius:25px;
+
+  background:linear-gradient(90deg,#4da6ff,#2f8cff);
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+  font-size:14px;
+}
+
+.contact-form button:hover{
+  transform:scale(1.03);
+}
+@media(max-width:768px){
+
+  .contact{
+    padding:120px 15px 60px;
+  }
+
+  .contact-container{
+    grid-template-columns:1fr;
+    padding:20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== FOOTER ===== */
+.footer{
+  background:#021b34;
+  padding:60px 20px 20px;
+  border-top:1px solid rgba(77,166,255,0.2);
+}
+
+/* GRID */
+.footer-container{
+  max-width:1100px;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+
+/* HEADINGS */
+.footer h2,
+.footer h3{
+  color:#4da6ff;
+  margin-bottom:15px;
+}
+
+/* TEXT */
+.footer p{
+  color:#cfe6ff;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* LINKS */
+.footer-links a{
+  display:block;
+  color:#cfe6ff;
+  text-decoration:none;
+  margin:6px 0;
+  transition:0.3s;
+}
+
+.footer-links a:hover{
+  color:#2f8cff;
+  transform:translateX(5px);
+}
+
+/* CONTACT ICONS */
+.footer-contact i{
+  margin-right:8px;
+  color:#4da6ff;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 16px;
+  border-radius:25px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+  background:#1ebe5d;
+  transform:scale(1.05);
+}
+
+/* BOTTOM */
+.footer-bottom{
+  text-align:center;
+  margin-top:30px;
+  border-top:1px solid rgba(77,166,255,0.1);
+  padding-top:15px;
+  font-size:13px;
+  color:#aaa;
+}

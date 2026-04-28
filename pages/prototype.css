@@ -1,0 +1,303 @@
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#021b34;
+  color:white;
+}
+
+/* ===== HEADER ===== */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  position:fixed;
+  width:100%;
+  top:0;
+  background:#0a2a4f;
+  border-bottom:1px solid rgba(47,140,255,0.2);
+  z-index:1000;
+}
+
+.logo img{
+  height:42px;
+  mix-blend-mode:lighten;
+}
+
+.nav{
+  display:flex;
+  gap:25px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#cfe6ff;
+}
+
+.nav a:hover{
+  color:#2f8cff;
+}
+
+.hamburger{
+  display:none;
+}
+
+.close-btn{
+  display:none;
+}
+
+/* ===== OVERLAY ===== */
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s;
+  z-index:999;
+}
+
+.overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+/* ===== FORM SECTION ===== */
+.prototype-section{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:120px 20px 60px;
+}
+
+.prototype-container{
+  width:100%;
+  max-width:500px;
+  background:rgba(255,255,255,0.05);
+  padding:30px;
+  border-radius:15px;
+  backdrop-filter:blur(10px);
+}
+
+.prototype-container h2{
+  text-align:center;
+  margin-bottom:25px;
+  color:#4da6ff;
+}
+
+/* ===== INPUT ===== */
+.input-group{
+  position:relative;
+  margin-bottom:20px;
+}
+
+.input-group input,
+.input-group textarea{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:rgba(255,255,255,0.08);
+  color:white;
+  outline:none;
+}
+
+.input-group label{
+  position:absolute;
+  top:50%;
+  left:12px;
+  transform:translateY(-50%);
+  font-size:14px;
+  color:#aaa;
+  pointer-events:none;
+  transition:0.3s;
+}
+
+/* FLOAT LABEL */
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label{
+  top:-8px;
+  font-size:12px;
+  color:#4da6ff;
+}
+
+/* ===== BUTTON ===== */
+.prototype-btn{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:25px;
+  background:#4da6ff;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.prototype-btn:hover{
+  background:#2f8cff;
+}
+/*=== MOBILE ===== */
+@media(max-width:768px){
+
+  .hamburger{
+    display:block;
+  }
+
+  .nav{
+    position:fixed;
+    top:0;
+    left:-100%;
+    width:75%;
+    height:100vh;
+
+    background:linear-gradient(180deg,#021b34,#0a2a4f);
+
+    flex-direction:column;
+    padding-top:80px;
+    gap:10px;
+
+    transition:0.4s;
+    z-index:1001;
+  }
+
+  .nav a{
+    padding:15px 30px;
+    font-size:18px;
+  }
+
+  .nav.active{
+    left:0;
+  }
+
+  .close-btn{
+    display:block;
+    position:absolute;
+    top:20px;
+    right:20px;
+    font-size:22px;
+    cursor:pointer;
+  }
+
+  .overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    opacity:0;
+    visibility:hidden;
+    transition:0.3s;
+    z-index:1000;
+  }
+
+  .overlay.active{
+    opacity:1;
+    visibility:visible;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== FOOTER ===== */
+.footer{
+  background:#021b34;
+  padding:60px 20px 20px;
+  border-top:1px solid rgba(77,166,255,0.2);
+}
+
+/* GRID */
+.footer-container{
+  max-width:1100px;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+
+/* HEADINGS */
+.footer h2,
+.footer h3{
+  color:#4da6ff;
+  margin-bottom:15px;
+}
+
+/* TEXT */
+.footer p{
+  color:#cfe6ff;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* LINKS */
+.footer-links a{
+  display:block;
+  color:#cfe6ff;
+  text-decoration:none;
+  margin:6px 0;
+  transition:0.3s;
+}
+
+.footer-links a:hover{
+  color:#2f8cff;
+  transform:translateX(5px);
+}
+
+/* CONTACT ICONS */
+.footer-contact i{
+  margin-right:8px;
+  color:#4da6ff;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 16px;
+  border-radius:25px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+  background:#1ebe5d;
+  transform:scale(1.05);
+}
+
+/* BOTTOM */
+.footer-bottom{
+  text-align:center;
+  margin-top:30px;
+  border-top:1px solid rgba(77,166,255,0.1);
+  padding-top:15px;
+  font-size:13px;
+  color:#aaa;
+}
