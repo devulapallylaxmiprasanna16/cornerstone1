@@ -32,139 +32,750 @@
 </header>
 
 <div class="overlay" id="overlay"></div>
-<!-- SEARCH -->
+
+<!-- SEARCH + CATEGORY -->
 <div class="search-box">
+
   <input type="text" id="searchInput" placeholder="Search projects...">
+
+  <div class="category-dropdown">
+    <button id="categoryBtn">All Categories <i class="fas fa-chevron-down"></i></button>
+    <ul id="categoryList">
+      <li data-category="all">All</li>
+      <li data-category="iot">IoT</li>
+      <li data-category="embedded">Embedded</li>
+      <li data-category="waste">Waste Management</li>
+      <li data-category="agriculture">Agriculture</li>
+    </ul>
+  </div>
+
 </div>
 
 <!-- PROJECTS -->
 <section class="projects">
 
-<div class="projects-container" id="projectsContainer">
 
-  <div class="project-card" data-name="Smart Irrigation">
-    <img src="../assets/images/p1.jpg">
-    <h3>Smart Irrigation</h3>
-    <p>IoT based irrigation system</p>
-    <span>₹4999</span>
-    <button onclick="buyNow('Smart Irrigation')">Buy Now</button>
+
+<div class="projects-container">
+
+  <!-- 1 -->
+  <div class="project-card" data-name="WiFi Based Home Automation" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>WiFi Based Home Automation</h3>
+    <p>Control appliances via internet</p>
+    <span>₹4500</span>
+    <button onclick="buyNow('WiFi Based Home Automation')">Buy Now</button>
   </div>
 
-  <div class="project-card" data-name="AI Chatbot">
-    <img src="../assets/images/p2.jpg">
-    <h3>AI Chatbot</h3>
-    <p>NLP chatbot system</p>
-    <span>₹3999</span>
-    <button onclick="buyNow('AI Chatbot')">Buy Now</button>
+  <!-- 2 -->
+  <div class="project-card" data-name="IoT Weather Monitoring System" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>IoT Weather Monitoring System</h3>
+    <p>Monitor weather remotely</p>
+    <span>₹4000</span>
+    <button onclick="buyNow('IoT Weather Monitoring System')">Buy Now</button>
   </div>
 
-  <div class="project-card" data-name="Face Recognition">
-    <img src="../assets/images/p3.jpg">
-    <h3>Face Recognition</h3>
-    <p>AI security system</p>
-    <span>₹5999</span>
-    <button onclick="buyNow('Face Recognition')">Buy Now</button>
+  <!-- 3 -->
+  <div class="project-card" data-name="Smart Energy Meter using IoT" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>Smart Energy Meter using IoT</h3>
+    <p>Track electricity usage online</p>
+    <span>₹5000</span>
+    <button onclick="buyNow('Smart Energy Meter using IoT')">Buy Now</button>
   </div>
 
-  <div class="project-card" data-name="Face Recognition">
-    <img src="../assets/images/p3.jpg">
-    <h3>Face Recognition</h3>
-    <p>AI security system</p>
-    <span>₹5999</span>
-    <button onclick="buyNow('Face Recognition')">Buy Now</button>
+  <!-- 4 -->
+  <div class="project-card" data-name="IoT Water Level Monitoring" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>IoT Water Level Monitoring</h3>
+    <p>Monitor tank levels remotely</p>
+    <span>₹4500</span>
+    <button onclick="buyNow('IoT Water Level Monitoring')">Buy Now</button>
+  </div>
+
+  <!-- 5 -->
+  <div class="project-card" data-name="Smart Parking System using IoT" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>Smart Parking System using IoT</h3>
+    <p>Manage parking efficiently</p>
+    <span>₹6000</span>
+    <button onclick="buyNow('Smart Parking System using IoT')">Buy Now</button>
+  </div>
+
+  <!-- 6 -->
+  <div class="project-card" data-name="IoT Based Air Quality Monitoring" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>IoT Based Air Quality Monitoring</h3>
+    <p>Detect pollution levels</p>
+    <span>₹6000</span>
+    <button onclick="buyNow('IoT Based Air Quality Monitoring')">Buy Now</button>
+  </div>
+
+  
+
+  <!-- 8 -->
+  <div class="project-card" data-name="IoT Health Monitoring System" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>IoT Health Monitoring System</h3>
+    <p>Track patient health data</p>
+    <span>₹7000</span>
+    <button onclick="buyNow('IoT Health Monitoring System')">Buy Now</button>
+  </div>
+
+  <!-- 9 -->
+  <div class="project-card" data-name="Smart Irrigation using IoT" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>Smart Irrigation using IoT</h3>
+    <p>Control watering remotely</p>
+    <span>₹6500</span>
+    <button onclick="buyNow('Smart Irrigation using IoT')">Buy Now</button>
+  </div>
+
+  <!-- 10 -->
+  <div class="project-card" data-name="IoT Based Smart Dustbin" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>IoT Based Smart Dustbin</h3>
+    <p>Monitor garbage levels</p>
+    <span>₹5000</span>
+    <button onclick="buyNow('IoT Based Smart Dustbin')">Buy Now</button>
+  </div>
+
+  
+
+  <!-- 12 -->
+  <div class="project-card" data-name="IoT Fire Detection System" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>IoT Fire Detection System</h3>
+    <p>Send alerts remotely</p>
+    <span>₹5000</span>
+    <button onclick="buyNow('IoT Fire Detection System')">Buy Now</button>
+  </div>
+
+  <!-- 13 -->
+  <div class="project-card" data-name="Smart Water Meter using IoT" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>Smart Water Meter using IoT</h3>
+    <p>Monitor water usage</p>
+    <span>₹5000</span>
+    <button onclick="buyNow('Smart Water Meter using IoT')">Buy Now</button>
+  </div>
+
+  <!-- 14 -->
+  <div class="project-card" data-name="IoT Industrial Monitoring" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>IoT Industrial Monitoring</h3>
+    <p>Monitor machines remotely</p>
+    <span>₹6500</span>
+    <button onclick="buyNow('IoT Industrial Monitoring')">Buy Now</button>
+  </div>
+
+  <!-- 15 -->
+  <div class="project-card" data-name="Smart Home Security using IoT" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>Smart Home Security using IoT</h3>
+    <p>Detect intrusions remotely</p>
+    <span>₹6000</span>
+    <button onclick="buyNow('Smart Home Security using IoT')">Buy Now</button>
+  </div>
+
+  <!-- 16 -->
+  <div class="project-card" data-name="IoT Smart Classroom System" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>IoT Smart Classroom System</h3>
+    <p>Manage classroom devices</p>
+    <span>₹6000</span>
+    <button onclick="buyNow('IoT Smart Classroom System')">Buy Now</button>
+  </div>
+
+  <!-- 17 -->
+  <div class="project-card" data-name="IoT Based Smart Traffic System" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>IoT Based Smart Traffic System</h3>
+    <p>Control signals dynamically</p>
+    <span>₹6500</span>
+    <button onclick="buyNow('IoT Based Smart Traffic System')">Buy Now</button>
+  </div>
+
+  <!-- 18 -->
+  <div class="project-card" data-name="IoT Cold Storage Monitoring" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>IoT Cold Storage Monitoring</h3>
+    <p>Maintain temperature remotely</p>
+    <span>₹7000</span>
+    <button onclick="buyNow('IoT Cold Storage Monitoring')">Buy Now</button>
+  </div>
+
+  <!-- 19 -->
+  <div class="project-card" data-name="IoT Smart City Model" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>IoT Smart City Model</h3>
+    <p>Demonstrate smart systems</p>
+    <span>₹9000</span>
+    <button onclick="buyNow('IoT Smart City Model')">Buy Now</button>
+  </div>
+
+  <!-- 20 -->
+  <div class="project-card" data-name="IoT Smart Agriculture System" data-category="iot">
+    <img src="../assets/images/iot.png">
+    <h3>IoT Smart Agriculture System</h3>
+    <p>Monitor crop conditions</p>
+    <span>₹7000</span>
+    <button onclick="buyNow('IoT Smart Agriculture System')">Buy Now</button>
+  </div>
+
+  <div class="project-card" data-name="Bluetooth Controlled Home Appliances" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>Bluetooth Controlled Home Appliances</h3>
+  <p>Wireless device control</p>
+  <span>₹2500</span>
+  <button onclick="buyNow('Bluetooth Controlled Home Appliances')">Buy Now</button>
   </div>
 
 
-  <div class="project-card" data-name="Face Recognition">
-    <img src="../assets/images/p3.jpg">
-    <h3>Face Recognition</h3>
-    <p>AI security system</p>
-    <span>₹5999</span>
-    <button onclick="buyNow('Face Recognition')">Buy Now</button>
+  <div class="project-card" data-name="RFID Attendance System" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>RFID Attendance System</h3>
+  <p>Track attendance</p>
+  <span>₹3000</span>
+  <button onclick="buyNow('RFID Attendance System')">Buy Now</button>
   </div>
 
-
-
-
-  <div class="project-card" data-name="Face Recognition">
-    <img src="../assets/images/p3.jpg">
-    <h3>Face Recognition</h3>
-    <p>AI security system</p>
-    <span>₹5999</span>
-    <button onclick="buyNow('Face Recognition')">Buy Now</button>
+  <div class="project-card" data-name="Digital Voltmeter using Arduino" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>Digital Voltmeter using Arduino</h3>
+  <p>Measure voltage</p>
+  <span>₹1800</span>
+  <button onclick="buyNow('Digital Voltmeter using Arduino')">Buy Now</button>
   </div>
 
-
-
-
-
-
-
-  <div class="project-card" data-name="Face Recognition">
-    <img src="../assets/images/p3.jpg">
-    <h3>Face Recognition</h3>
-    <p>AI security system</p>
-    <span>₹5999</span>
-    <button onclick="buyNow('Face Recognition')">Buy Now</button>
+  <div class="project-card" data-name="IR Object Counter" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>IR Object Counter</h3>
+  <p>Count objects</p>
+  <span>₹2000</span>
+  <button onclick="buyNow('IR Object Counter')">Buy Now</button>
   </div>
 
-
-
-
-  <div class="project-card" data-name="Face Recognition">
-    <img src="../assets/images/p3.jpg">
-    <h3>Face Recognition</h3>
-    <p>AI security system</p>
-    <span>₹5999</span>
-    <button onclick="buyNow('Face Recognition')">Buy Now</button>
-  </div>
-
+<!-- 5 -->
+<div class="project-card" data-name="Gas Leakage Detection System" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>Gas Leakage Detection System</h3>
+  <p>Ensure safety</p>
+  <span>₹2200</span>
+  <button onclick="buyNow('Gas Leakage Detection System')">Buy Now</button>
 </div>
 
-</section>
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
+<!-- 6 -->
+<div class="project-card" data-name="Fire Alarm System" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>Fire Alarm System</h3>
+  <p>Detect fire</p>
+  <span>₹2000</span>
+  <button onclick="buyNow('Fire Alarm System')">Buy Now</button>
+</div>
 
+
+<div class="project-card" data-name="Password Door Lock System" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>Password Door Lock System</h3>
+  <p>Improve security</p>
+  <span>₹3000</span>
+  <button onclick="buyNow('Password Door Lock System')">Buy Now</button>
+</div>
+
+<!-- 8 -->
+<div class="project-card" data-name="Soil Moisture Indicator" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>Soil Moisture Indicator</h3>
+  <p>Monitor soil</p>
+  <span>₹1800</span>
+  <button onclick="buyNow('Soil Moisture Indicator')">Buy Now</button>
+</div>
+
+<!-- 9 -->
+<div class="project-card" data-name="Heart Rate Monitoring System" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>Heart Rate Monitoring System</h3>
+  <p>Measure pulse</p>
+  <span>₹2500</span>
+  <button onclick="buyNow('Heart Rate Monitoring System')">Buy Now</button>
+</div>
+
+<!-- 10 -->
+<div class="project-card" data-name="Temperature Monitoring System" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>Temperature Monitoring System</h3>
+  <p>Track temperature</p>
+  <span>₹2000</span>
+  <button onclick="buyNow('Temperature Monitoring System')">Buy Now</button>
+</div>
+
+
+
+<!-- 14 -->
+<div class="project-card" data-name="Automatic Fan Speed Control" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>Automatic Fan Speed Control</h3>
+  <p>Control fan speed</p>
+  <span>₹2000</span>
+  <button onclick="buyNow('Automatic Fan Speed Control')">Buy Now</button>
+</div>
+
+
+
+<!-- 16 -->
+<div class="project-card" data-name="RFID Door Lock System" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>RFID Door Lock System</h3>
+  <p>Secure access</p>
+  <span>₹3500</span>
+  <button onclick="buyNow('RFID Door Lock System')">Buy Now</button>
+</div>
+
+<!-- 17 -->
+<div class="project-card" data-name="Metal Detection System" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>Metal Detection System</h3>
+  <p>Detect metals</p>
+  <span>₹3000</span>
+  <button onclick="buyNow('Metal Detection System')">Buy Now</button>
+</div>
+
+<!-- 18 -->
+<div class="project-card" data-name="Ultrasonic Distance Measurement" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>Ultrasonic Distance Measurement</h3>
+  <p>Measure distance</p>
+  <span>₹2000</span>
+  <button onclick="buyNow('Ultrasonic Distance Measurement')">Buy Now</button>
+</div>
+
+<!-- 20 -->
+<div class="project-card" data-name="Obstacle Avoiding Robot" data-category="embedded">
+  <img src="../assets/images/embedded.png">
+  <h3>Obstacle Avoiding Robot</h3>
+  <p>Collision avoidance</p>
+  <span>₹3200</span>
+  <button onclick="buyNow('Obstacle Avoiding Robot')">Buy Now</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= IRRIGATION PROJECTS ================= -->
+
+<!-- 1 -->
+<div class="project-card" data-name="Smart Irrigation System" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Smart Irrigation System</h3>
+  <p>Save water</p>
+  <span>₹3500</span>
+  <button onclick="buyNow('Smart Irrigation System')">Buy Now</button>
+</div>
+
+<!-- 2 -->
+<div class="project-card" data-name="Automatic Plant Watering System" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Automatic Plant Watering System</h3>
+  <p>Water plants automatically</p>
+  <span>₹3000</span>
+  <button onclick="buyNow('Automatic Plant Watering System')">Buy Now</button>
+</div>
+
+<!-- 3 -->
+<div class="project-card" data-name="Soil Moisture Based Irrigation" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Soil Moisture Based Irrigation</h3>
+  <p>Optimize irrigation</p>
+  <span>₹3500</span>
+  <button onclick="buyNow('Soil Moisture Based Irrigation')">Buy Now</button>
+</div>
+
+<!-- 4 -->
+<div class="project-card" data-name="Solar Powered Irrigation System" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Solar Powered Irrigation System</h3>
+  <p>Use renewable energy</p>
+  <span>₹6000</span>
+  <button onclick="buyNow('Solar Powered Irrigation System')">Buy Now</button>
+</div>
+
+<!-- 5 -->
+<div class="project-card" data-name="Drip Irrigation System" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Drip Irrigation System</h3>
+  <p>Efficient water usage</p>
+  <span>₹5000</span>
+  <button onclick="buyNow('Drip Irrigation System')">Buy Now</button>
+</div>
+
+<!-- 6 -->
+<div class="project-card" data-name="Rainwater Harvesting System" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Rainwater Harvesting System</h3>
+  <p>Store rainwater</p>
+  <span>₹6000</span>
+  <button onclick="buyNow('Rainwater Harvesting System')">Buy Now</button>
+</div>
+
+<!-- 7 -->
+<div class="project-card" data-name="Smart Greenhouse System" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Smart Greenhouse System</h3>
+  <p>Control crop environment</p>
+  <span>₹7000</span>
+  <button onclick="buyNow('Smart Greenhouse System')">Buy Now</button>
+</div>
+
+<!-- 8 -->
+<div class="project-card" data-name="Seed Sowing Machine" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Seed Sowing Machine</h3>
+  <p>Automate farming</p>
+  <span>₹7000</span>
+  <button onclick="buyNow('Seed Sowing Machine')">Buy Now</button>
+</div>
+
+<!-- 9 -->
+<div class="project-card" data-name="Fertilizer Spraying Robot" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Fertilizer Spraying Robot</h3>
+  <p>Automate spraying</p>
+  <span>₹8000</span>
+  <button onclick="buyNow('Fertilizer Spraying Robot')">Buy Now</button>
+</div>
+
+<!-- 10 -->
+<div class="project-card" data-name="IoT Smart Irrigation" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>IoT Smart Irrigation</h3>
+  <p>Remote irrigation</p>
+  <span>₹6500</span>
+  <button onclick="buyNow('IoT Smart Irrigation')">Buy Now</button>
+</div>
+
+<!-- 11 -->
+<div class="project-card" data-name="Water Pump Automation" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Water Pump Automation</h3>
+  <p>Control pump</p>
+  <span>₹4000</span>
+  <button onclick="buyNow('Water Pump Automation')">Buy Now</button>
+</div>
+
+<!-- 12 -->
+<div class="project-card" data-name="Smart Soil Nutrient Detector" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Smart Soil Nutrient Detector</h3>
+  <p>Analyze soil</p>
+  <span>₹7000</span>
+  <button onclick="buyNow('Smart Soil Nutrient Detector')">Buy Now</button>
+</div>
+
+<!-- 13 -->
+<div class="project-card" data-name="Smart Crop Monitoring System" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Smart Crop Monitoring System</h3>
+  <p>Monitor crop growth</p>
+  <span>₹7000</span>
+  <button onclick="buyNow('Smart Crop Monitoring System')">Buy Now</button>
+</div>
+
+<!-- 14 -->
+<div class="project-card" data-name="Automatic Water Distribution" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Automatic Water Distribution</h3>
+  <p>Manage water flow</p>
+  <span>₹6000</span>
+  <button onclick="buyNow('Automatic Water Distribution')">Buy Now</button>
+</div>
+
+<!-- 15 -->
+<div class="project-card" data-name="Irrigation using Weather Data" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Irrigation using Weather Data</h3>
+  <p>Smart irrigation</p>
+  <span>₹7500</span>
+  <button onclick="buyNow('Irrigation using Weather Data')">Buy Now</button>
+</div>
+
+<!-- 16 -->
+<div class="project-card" data-name="Solar Water Pump Controller" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Solar Water Pump Controller</h3>
+  <p>Solar irrigation</p>
+  <span>₹6500</span>
+  <button onclick="buyNow('Solar Water Pump Controller')">Buy Now</button>
+</div>
+
+<!-- 17 -->
+<div class="project-card" data-name="Smart Farming Robot" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Smart Farming Robot</h3>
+  <p>Farm automation</p>
+  <span>₹9000</span>
+  <button onclick="buyNow('Smart Farming Robot')">Buy Now</button>
+</div>
+
+<!-- 18 -->
+<div class="project-card" data-name="Irrigation Alert System" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Irrigation Alert System</h3>
+  <p>Notify water needs</p>
+  <span>₹4000</span>
+  <button onclick="buyNow('Irrigation Alert System')">Buy Now</button>
+</div>
+
+<!-- 19 -->
+<div class="project-card" data-name="Multi-zone Irrigation System" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Multi-zone Irrigation System</h3>
+  <p>Control multiple areas</p>
+  <span>₹7000</span>
+  <button onclick="buyNow('Multi-zone Irrigation System')">Buy Now</button>
+</div>
+
+<!-- 20 -->
+<div class="project-card" data-name="Smart Agriculture Model" data-category="agriculture">
+  <img src="../assets/images/agriculture.png">
+  <h3>Smart Agriculture Model</h3>
+  <p>Demonstrate farming tech</p>
+  <span>₹8000</span>
+  <button onclick="buyNow('Smart Agriculture Model')">Buy Now</button>
+</div>
+
+
+
+
+
+
+<!-- ================= WASTE MANAGEMENT PROJECTS ================= -->
+
+<!-- 1 -->
+<div class="project-card" data-name="Smart Dustbin with Auto Lid" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Smart Dustbin with Auto Lid</h3>
+  <p>Touch-free disposal</p>
+  <span>₹3000</span>
+  <button onclick="buyNow('Smart Dustbin with Auto Lid')">Buy Now</button>
+</div>
+
+<!-- 2 -->
+<div class="project-card" data-name="Waste Segregation System" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Waste Segregation System</h3>
+  <p>Separate waste</p>
+  <span>₹7500</span>
+  <button onclick="buyNow('Waste Segregation System')">Buy Now</button>
+</div>
+
+<!-- 3 -->
+<div class="project-card" data-name="Smart Garbage Monitoring" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Smart Garbage Monitoring</h3>
+  <p>Track waste levels</p>
+  <span>₹5000</span>
+  <button onclick="buyNow('Smart Garbage Monitoring')">Buy Now</button>
+</div>
+
+<!-- 4 -->
+<div class="project-card" data-name="Plastic Shredder Model" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Plastic Shredder Model</h3>
+  <p>Recycle plastic</p>
+  <span>₹9000</span>
+  <button onclick="buyNow('Plastic Shredder Model')">Buy Now</button>
+</div>
+
+<!-- 5 -->
+<div class="project-card" data-name="Smart Waste Collection System" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Smart Waste Collection System</h3>
+  <p>Optimize pickup</p>
+  <span>₹7000</span>
+  <button onclick="buyNow('Smart Waste Collection System')">Buy Now</button>
+</div>
+
+<!-- 6 -->
+<div class="project-card" data-name="IoT Garbage Monitoring System" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>IoT Garbage Monitoring System</h3>
+  <p>Remote monitoring</p>
+  <span>₹6000</span>
+  <button onclick="buyNow('IoT Garbage Monitoring System')">Buy Now</button>
+</div>
+
+<!-- 7 -->
+<div class="project-card" data-name="Automatic Composting System" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Automatic Composting System</h3>
+  <p>Convert waste to manure</p>
+  <span>₹8000</span>
+  <button onclick="buyNow('Automatic Composting System')">Buy Now</button>
+</div>
+
+<!-- 8 -->
+<div class="project-card" data-name="Smart Recycling Machine" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Smart Recycling Machine</h3>
+  <p>Encourage recycling</p>
+  <span>₹9000</span>
+  <button onclick="buyNow('Smart Recycling Machine')">Buy Now</button>
+</div>
+
+<!-- 9 -->
+<div class="project-card" data-name="Waste Sorting Conveyor" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Waste Sorting Conveyor</h3>
+  <p>Industrial sorting</p>
+  <span>₹8500</span>
+  <button onclick="buyNow('Waste Sorting Conveyor')">Buy Now</button>
+</div>
+
+<!-- 10 -->
+<div class="project-card" data-name="Smart Drain Monitoring" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Smart Drain Monitoring</h3>
+  <p>Monitor drainage</p>
+  <span>₹5500</span>
+  <button onclick="buyNow('Smart Drain Monitoring')">Buy Now</button>
+</div>
+
+<!-- 11 -->
+<div class="project-card" data-name="Garbage Level Indicator" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Garbage Level Indicator</h3>
+  <p>Detect bin level</p>
+  <span>₹4000</span>
+  <button onclick="buyNow('Garbage Level Indicator')">Buy Now</button>
+</div>
+
+<!-- 12 -->
+<div class="project-card" data-name="Bio Waste Management System" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Bio Waste Management System</h3>
+  <p>Manage organic waste</p>
+  <span>₹7000</span>
+  <button onclick="buyNow('Bio Waste Management System')">Buy Now</button>
+</div>
+
+<!-- 13 -->
+<div class="project-card" data-name="Smart Public Dustbin" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Smart Public Dustbin</h3>
+  <p>Urban waste control</p>
+  <span>₹5000</span>
+  <button onclick="buyNow('Smart Public Dustbin')">Buy Now</button>
+</div>
+
+<!-- 14 -->
+<div class="project-card" data-name="Waste Collection Robot" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Waste Collection Robot</h3>
+  <p>Automate cleaning</p>
+  <span>₹8500</span>
+  <button onclick="buyNow('Waste Collection Robot')">Buy Now</button>
+</div>
+
+<!-- 15 -->
+<div class="project-card" data-name="E-Waste Management System" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>E-Waste Management System</h3>
+  <p>Manage electronics waste</p>
+  <span>₹8000</span>
+  <button onclick="buyNow('E-Waste Management System')">Buy Now</button>
+</div>
+
+<!-- 16 -->
+<div class="project-card" data-name="Smart Sewage Monitoring" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Smart Sewage Monitoring</h3>
+  <p>Monitor sewage system</p>
+  <span>₹7000</span>
+  <button onclick="buyNow('Smart Sewage Monitoring')">Buy Now</button>
+</div>
+
+<!-- 17 -->
+<div class="project-card" data-name="Plastic Bottle Collector Machine" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Plastic Bottle Collector Machine</h3>
+  <p>Collect bottles</p>
+  <span>₹9000</span>
+  <button onclick="buyNow('Plastic Bottle Collector Machine')">Buy Now</button>
+</div>
+
+<!-- 18 -->
+<div class="project-card" data-name="Smart Landfill Monitoring" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Smart Landfill Monitoring</h3>
+  <p>Track landfill data</p>
+  <span>₹7500</span>
+  <button onclick="buyNow('Smart Landfill Monitoring')">Buy Now</button>
+</div>
+
+<!-- 19 -->
+<div class="project-card" data-name="Waste Management IoT System" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Waste Management IoT System</h3>
+  <p>Smart waste handling</p>
+  <span>₹6500</span>
+  <button onclick="buyNow('Waste Management IoT System')">Buy Now</button>
+</div>
+
+<!-- 20 -->
+<div class="project-card" data-name="Automatic Waste Compactor" data-category="waste">
+  <img src="../assets/images/waste.png">
+  <h3>Automatic Waste Compactor</h3>
+  <p>Compress waste</p>
+  <span>₹9000</span>
+  <button onclick="buyNow('Automatic Waste Compactor')">Buy Now</button>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
   <div class="footer-container">
 
-    <!-- LEFT -->
-    <div class="footer-about">
+    <div>
       <h2>Cornerstone</h2>
-      <p>
-        Transforming ideas into real-world solutions through IoT,
-        AI, and innovative technologies.
-      </p>
+      <p>Transforming ideas into real-world solutions.</p>
     </div>
 
-    <!-- LINKS -->
     <div class="footer-links">
-      <h3>Quick Links</h3>
-      <a href="index.html">Home</a>
-      <a href="pages/about.html">About</a>
-      
-      <a href="pages/projects.html">Projects</a>
-      <a href="pages/contact.html">Contact</a>
+      <h3>Links</h3>
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
     </div>
 
     <!-- CONTACT -->
     <div class="footer-contact">
       <h3>Contact</h3>
-      <p><i class="fas fa-phone"></i> +91 81791 37777</p>
+      <p><i class="fas fa-phone"></i> +91 817914 3777</p>
       <p><i class="fas fa-envelope"></i> cornerstone@gmail.com</p>
 
-      <a href="https://wa.me/918179137777" target="_blank" class="whatsapp-btn">
+      <a href="https://wa.me/918179143777" target="_blank" class="whatsapp-btn">
         <i class="fab fa-whatsapp"></i> WhatsApp Us
       </a>
     </div>
 
   </div>
 
-  <!-- BOTTOM -->
-  <div class="footer-bottom">
-    <p>© <span id="year"></span> Cornerstone. All Rights Reserved.</p>
-  </div>
-
 </footer>
+
 
 <script src="projects.js"></script>
 

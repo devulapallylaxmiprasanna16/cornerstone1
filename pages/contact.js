@@ -35,7 +35,7 @@ Name: ${name}
 Phone: ${phone}
 Message: ${message}`;
 
-  const url = `https://wa.me/91817913777?text=${encodeURIComponent(finalMsg)}`;
+  const url = `https://wa.me/918179143777?text=${encodeURIComponent(finalMsg)}`;
 
   window.open(url, "_blank");
 });

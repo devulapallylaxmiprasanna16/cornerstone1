@@ -167,7 +167,30 @@ Name: ${name}
 Phone: ${phone}
 Message: ${message}`;
 
-  const url = `https://wa.me/91817913777?text=${encodeURIComponent(finalMsg)}`;
+  const url = `https://wa.me/918179143777?text=${encodeURIComponent(finalMsg)}`;
 
   window.open(url, "_blank");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+const wrapper = document.getElementById("servicesWrapper");
+const leftBtn = document.getElementById("leftBtn");
+const rightBtn = document.getElementById("rightBtn");
+
+leftBtn.addEventListener("click", () => {
+  wrapper.scrollBy({ left: -250, behavior: "smooth" });
+});
+
+rightBtn.addEventListener("click", () => {
+  wrapper.scrollBy({ left: 250, behavior: "smooth" });
 });

@@ -33,7 +33,7 @@ document.getElementById("prototypeForm").addEventListener("submit", function(e){
   const desc = inputs[3].value;
   const expect = inputs[4].value;
 
-  const phone = "91817913777";
+  const phone = "918179143777";
 
   const message = `Hello Team,
 Name: ${name}
