@@ -16,7 +16,7 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 25px;
+  padding:5px 20px;
   position:fixed;
   width:100%;
   top:0;
@@ -27,7 +27,7 @@ body{
 }
 
 .logo img{
-  height:42px;
+  height: 62px;
 }
 
 /* ===== NAV ===== */
