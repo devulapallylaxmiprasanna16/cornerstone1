@@ -1536,7 +1536,7 @@ border-radius:250px;
 
 
 #typing-text::after{
-  content:"|";
+  content:"";
   margin-left:5px;
   animation:blink 1s infinite;
 }
