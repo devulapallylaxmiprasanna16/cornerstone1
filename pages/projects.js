@@ -1,4 +1,4 @@
-// NAV
+// ================= NAV =================
 const hamburger = document.getElementById("hamburger");
 const nav = document.getElementById("nav");
 const closeBtn = document.getElementById("closeBtn");
@@ -14,31 +14,46 @@ overlay.onclick = closeBtn.onclick = () => {
   overlay.classList.remove("active");
 };
 
-// SEARCH + FILTER
+
+// ================= SEARCH + FILTER =================
 const searchInput = document.getElementById("searchInput");
 const cards = document.querySelectorAll(".project-card");
 
 const categoryBtn = document.getElementById("categoryBtn");
 const categoryList = document.getElementById("categoryList");
+const dropdown = document.querySelector(".category-dropdown");
 
 let selectedCategory = "all";
 
-categoryBtn.onclick = () => {
-  document.querySelector(".category-dropdown").classList.toggle("active");
+// OPEN / CLOSE DROPDOWN
+categoryBtn.onclick = (e) => {
+  e.stopPropagation(); // prevent immediate close
+  dropdown.classList.toggle("active");
 };
 
-categoryList.querySelectorAll("li").forEach(item=>{
-  item.onclick = ()=>{
+// SELECT CATEGORY
+categoryList.querySelectorAll("li").forEach(item => {
+  item.onclick = () => {
     selectedCategory = item.dataset.category;
     categoryBtn.innerHTML = item.innerText;
+
+    dropdown.classList.remove("active"); // close dropdown
     filterProjects();
   };
 });
 
-function filterProjects(){
+// CLOSE WHEN CLICKING OUTSIDE
+document.addEventListener("click", (e) => {
+  if (!dropdown.contains(e.target) && !categoryBtn.contains(e.target)) {
+    dropdown.classList.remove("active");
+  }
+});
+
+// FILTER FUNCTION
+function filterProjects() {
   const value = searchInput.value.toLowerCase();
 
-  cards.forEach(card=>{
+  cards.forEach(card => {
     const name = card.dataset.name.toLowerCase();
     const category = card.dataset.category;
 
@@ -49,9 +64,11 @@ function filterProjects(){
   });
 }
 
+// SEARCH INPUT
 searchInput.addEventListener("keyup", filterProjects);
 
-// WHATSAPP
-function buyNow(name){
-  window.open(`https://wa.me/918179143777?text=I want ${name}`);
+
+// ================= WHATSAPP =================
+function buyNow(name) {
+  window.open(`https://wa.me/918179143777?text=I want ${name}`, "_blank");
 }
