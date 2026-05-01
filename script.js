@@ -194,3 +194,36 @@ leftBtn.addEventListener("click", () => {
 rightBtn.addEventListener("click", () => {
   wrapper.scrollBy({ left: 250, behavior: "smooth" });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const text = "Real-World Innovations";
+let index = 0;
+
+function typeText() {
+  const element = document.getElementById("typing-text");
+
+  if (index < text.length) {
+    element.innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeText, 80); // speed (lower = faster)
+  }
+}
+
+window.onload = typeText;
